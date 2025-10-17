@@ -337,16 +337,6 @@ body {
   margin-bottom: 1.6rem;
   position: relative;
 }
-.nosotros-text h2::after {
-  content: "";
-  position: absolute;
-  bottom: -12px;
-  left: 0;
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--green), var(--orange));
-  border-radius: 2px;
-}
 
 .nosotros-text p {
   font-size: 1.05rem;
@@ -426,17 +416,11 @@ body.light-mode .nosotros-media {
   font-weight: 800;
   font-size: clamp(2.3rem, 4vw, 3rem);
   text-transform: uppercase;
-  color: var(--green);
+  color: var(--white);
   margin-bottom: 12px;
   position: relative;
 }
-.title-bar {
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--green), var(--orange));
-  margin: 0 auto 20px;
-  border-radius: 2px;
-}
+
 .contacto-head p {
   max-width: 650px;
   margin: 0 auto;
@@ -1058,16 +1042,6 @@ body.light-mode #hero::after {
   background-clip: text;
   color: transparent;
 }
-.proyectos-section .section-head h2 span::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 395px;
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--green), var(--orange));
-  border-radius: 2px;
-  }
 
 .proyectos-section .section-head p {
   color: var(--muted);
@@ -1306,16 +1280,7 @@ body.light-mode .proj p {
   margin-bottom: 1.5rem;
 }
 
-.services-section h2::after {
-  content: "";
-  position: absolute;
-  bottom: -12px; /* distancia desde el texto */
-  left: 320px;
-  width: 120px; /* largo de la línea */
-  height: 4px;
-  background: linear-gradient(90deg, var(--green), var(--orange));
-  border-radius: 2px;
-}
+
 
 
 
