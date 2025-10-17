@@ -501,7 +501,7 @@ body {
 }
 
 .nosotros-media:hover {
-  transform: scale(1.02);
+
   box-shadow: 0 20px 50px rgba(0,0,0,0.45);
 }
 
@@ -512,13 +512,9 @@ body {
   object-fit: cover;      /* llena el contenedor sin deformar */
   object-position: center;
   filter: brightness(0.9);
-  transition: filter 0.6s ease, transform 0.8s ease;
+
 }
 
-.nosotros-media:hover img {
-  filter: brightness(1);
-  transform: scale(1.05);
-}
 
 /* Modo día: corrige borde claro */
 body.light-mode .nosotros-media {
@@ -627,7 +623,7 @@ body.light-mode .nosotros-media {
   transition: transform .4s ease, box-shadow .4s ease;
 }
 .contacto-form:hover {
-  transform: translateY(-6px);
+
   box-shadow: 0 16px 40px rgba(0,0,0,0.4);
 }
 .contacto-form label {
@@ -997,12 +993,10 @@ body.light-mode {
   flex-wrap: wrap;
   border-radius: 18px;
   overflow: hidden;
-  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+ 
   background: var(--panel);
   box-shadow: 0 8px 32px rgba(0,0,0,0.25);
 }
-.service-card.reverse { flex-direction: row-reverse; }
-.service-card:hover { transform: translateY(-8px); }
 
 .service-card img {
   width: 48%;
@@ -1011,9 +1005,9 @@ body.light-mode {
   object-fit: cover;
   border-radius: 0;
   filter: brightness(.88);
-  transition: filter 0.4s ease;
+
 }
-.service-card:hover img { filter: brightness(1); }
+
 
 .service-text {
   flex: 1;
@@ -1261,7 +1255,7 @@ body.light-mode #hero::after {
   max-width: 400px;
 }
 .proj:hover {
-  transform: translateY(-6px) scale(1.02);
+  
   box-shadow: 0 12px 32px rgba(0,0,0,0.35);
 }
 
