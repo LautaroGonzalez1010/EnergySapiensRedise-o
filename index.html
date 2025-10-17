@@ -360,15 +360,28 @@
 </script>
 
 <script>
-  // === MENU HAMBURGUESA ===
-  const menuToggle = document.getElementById("menuToggle");
-  const navbar = document.querySelector(".navbar");
+const menuToggle = document.getElementById("menuToggle");
+const navbar = document.querySelector(".navbar");
 
-  menuToggle.addEventListener("click", () => {
+if (menuToggle) {
+  menuToggle.addEventListener("touchstart", e => {
+    e.stopPropagation();
+    e.preventDefault(); // evita doble evento en iOS
     menuToggle.classList.toggle("active");
     navbar.classList.toggle("active");
   });
+
+  document.body.addEventListener("touchstart", e => {
+    if (!navbar.contains(e.target) && navbar.classList.contains("active")) {
+      navbar.classList.remove("active");
+      menuToggle.classList.remove("active");
+    }
+  });
+}
 </script>
+
+
+
 
 
   

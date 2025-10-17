@@ -116,3 +116,36 @@ window.addEventListener('load', () => {
 ScrollTrigger.refresh();
 window.addEventListener("orientationchange", () => ScrollTrigger.refresh());
 window.addEventListener("resize", () => ScrollTrigger.refresh());
+
+
+// Contadores fluidos compatibles con iOS y Android
+document.querySelectorAll(".num").forEach(el => {
+  const end = +el.dataset.count || 0;
+  const fmt = n => n.toLocaleString("es-AR");
+  let started = false;
+
+  const animateCount = () => {
+    if (started) return;
+    started = true;
+    let n = 0;
+    const inc = Math.max(1, Math.ceil(end / 60));
+    const step = () => {
+      n += inc;
+      if (n >= end) el.textContent = fmt(end);
+      else {
+        el.textContent = fmt(n);
+        requestAnimationFrame(step);
+      }
+    };
+    requestAnimationFrame(step);
+  };
+
+  // Observador que detecta visibilidad (en lugar de ScrollTrigger)
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) animateCount();
+    });
+  }, { threshold: 0.6 });
+
+  obs.observe(el);
+});
