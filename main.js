@@ -7,7 +7,7 @@ window.addEventListener("scroll", () => {
 });
 
 // Wipe inicial (si GSAP no carga, el CSS ya lo oculta)
-gsap.to(".page-wipe", { yPercent: -100, duration: 0.9, ease: "power3.out", delay: 0.1 });
+
 
 // Mostrar imagen fallback si no hay video
 const video = document.querySelector(".hero-media");
@@ -21,7 +21,7 @@ if (video && video.tagName === "VIDEO") {
 // Reveal general
 gsap.utils.toArray(".reveal").forEach(el => {
   gsap.fromTo(el, { opacity: 0, y: 30 }, {
-    opacity: 1, y: 0, duration: 0.8, ease: "power3.out",
+    opacity: 1, y: 0, duration: 0, ease: "power3.out",
     scrollTrigger: { trigger: el, start: "top 80%" }
   });
 });
@@ -103,3 +103,16 @@ if (verMasBtn && extraGrid) {
 }
 
 
+// 🔧 FIX iOS fade-up que no aparecen hasta hacer zoom
+window.addEventListener('load', () => {
+  // Fuerza un pequeño scroll al cargar para disparar las animaciones
+  window.scrollTo(0, 1);
+  setTimeout(() => {
+    window.scrollTo(0, 0);
+  }, 50);
+});
+
+// 🩹 Fix para iOS que ignora triggers hasta el primer toque
+ScrollTrigger.refresh();
+window.addEventListener("orientationchange", () => ScrollTrigger.refresh());
+window.addEventListener("resize", () => ScrollTrigger.refresh());
