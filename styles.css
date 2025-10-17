@@ -1655,3 +1655,38 @@ section, header, footer, div, .navbar, #hero, .section, .contacto-section, .proy
 #hero, .navbar {
   overflow-x: clip !important;
 }
+
+/* === 📱 FIX CONTACTO EN MÓVILES (480px para abajo) === */
+@media (max-width: 500px) {
+  .contacto-section {
+    padding: 80px 5vw !important;
+  }
+
+  .contacto-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 2rem !important;
+  }
+
+  .contacto-info, .contacto-form {
+    width: 100% !important;
+    max-width: 400px !important;
+  }
+
+  .contacto-form {
+    padding: 1.5rem !important;
+  }
+
+  .contacto-mapa {
+    width: 100% !important;
+    max-width: 350px !important;
+    height: 200px !important;
+  }
+
+  /* Evita que nada se “coma” en la parte inferior */
+  body {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+  }
+}
