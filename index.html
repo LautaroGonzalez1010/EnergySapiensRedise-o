@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Energy Sapiens</title>
+
+  <!-- ===== FAVICON OPTIMIZADO ===== -->
+   <!-- Lucide Icons (para el botón día/noche) -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/logologo_512.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/logologo_512.png">
+  <link rel="apple-touch-icon" sizes="300x300" href="assets/logologo_512.png">
+  <link rel="shortcut icon" href="assets/logologo_512.png">
+  
+  <!-- ===== TIPOGRAFÍAS ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Sora:wght@500;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ===== ICONOS ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- ===== ESTILOS ===== -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Transición tipo wipe (segura) -->
+  <div class="page-wipe" aria-hidden="true"></div>
+  <!-- Cursor glow -->
+  <div id="cursor" aria-hidden="true"></div>
+
+  <!-- NAV -->
+<header class="navbar">
+  <a href="#" class="brand">
+    <div class="logo-wrap">
+      <img src="assets/logologo.png" alt="Energy Sapiens" />
+    </div>
+    <div class="logo-wrap2">
+      <img src="assets/logologo2.png" alt="Energy Sapiens 2" />
+    </div>
+  </a>
+
+  <button class="menu-toggle" id="menuToggle">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav id="navMenu">
+    <a href="#servicios">Servicios</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto" class="cta">Contacto</a>
+  </nav>
+</header>
+
+
+
+  <!-- HERO -->
+<section id="hero" class="section">
+  <div class="media-wrap">
+    <!-- Hero con imagen dinámica -->
+    <img id="heroImage" class="hero-media fallback" src="assets/hero.jpg" alt="Fachadas y tecnología" />
+  </div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1 class="reveal-stagger">
+      Soluciones de <span>Arquitectura </span>e<span> Ingeniería</span>
+    </h1>
+    <p></p>
+    <h1 class="reveal-stagger"><span>Pensando </span>en mañana</h1>
+
+    <br />
+    <div class="cta-row reveal">
+      <a href="#contacto" class="btn-grad">Solicitar diagnóstico</a>
+      <a href="#proyectos" class="btn-outline">Ver proyectos</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat reveal">
+        <div class="num" data-count="67">0</div>
+        <div class="label">Proyectos</div>
+      </div>
+      <div class="stat reveal">
+        <div class="num" data-count="185000">0</div>
+        <div class="label">m² intervenidos</div>
+      </div>
+      <div class="stat reveal">
+        <div class="num" data-count="6">0</div>
+        <div class="label">Países</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="servicios" class="services-section">
+  <div class="section-head">
+    <h2><span>Servicios</span> de ingeniería y energía</h2>
+
+  </div>
+
+  <div class="services">
+    <article class="service-card">
+      <img src="assets/servicios1.png" alt="Ingeniería, Proyecto y Dirección de Obra">
+      <div class="service-text">
+        <h3>Ingeniería, Proyecto y Dirección de Obra</h3>
+        <ul>
+          <li>Dirección y gerenciamiento integral de obra</li>
+          <li>Asesoramiento y diseño técnico especializado</li>
+          <li>Elaboración de documentación y licitaciones</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="service-card reverse">
+      <img src="assets/servicios2.png" alt="Sistemas de gestión y control remoto">
+      <div class="service-text">
+        <h3>Sistemas de gestión y control remoto</h3>
+        <ul>
+          <li>IoT Industrial y automatización</li>
+          <li>Seguimiento y control desde app móvil</li>
+          <li>Soluciones a medida con integración de software</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="service-card">
+      <img src="assets/servicios3.png" alt="Instalaciones eléctricas">
+      <div class="service-text">
+        <h3>Instalaciones eléctricas</h3>
+        <ul>
+          <li>Proyectos de media y baja tensión</li>
+          <li>Certificaciones de conformidad</li>
+          <li>Gestión ante distribuidoras</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="proyectos" class="section proyectos-section">
+  <div class="section-head reveal">
+    <h2>Proyectos <span>destacados</span></h2>
+
+  </div>
+
+  <div class="projects-wrapper">
+    <div class="proyectos-visibles">
+      <figure class="proj"><img src="assets/proyecto1.jpg" alt=""><figcaption><h4>Importante Banco – 32 Sucursales</h4><p>Elaboración de documentación técnica · Dirección de obra integral · Certificaciones</p></figcaption></figure>
+      <figure class="proj"><img src="assets/proyecto2.jpg" alt=""><figcaption><h4>Eternit – Planta San Justo</h4><p>Proyecto, ejecución y puesta en marcha de sala de Tablero General</p></figcaption></figure>
+      <figure class="proj"><img src="assets/proyecto3.jpeg" alt=""><figcaption><h4>El Faro – Nordelta</h4><p>Diseño y provisión del sistema de iluminación</p></figcaption></figure>
+      <figure class="proj"><img src="assets/proyecto4.jpeg" alt=""><figcaption><h4>Bahía Grande – Nordelta</h4><p>Proyecto eléctrico de áreas públicas</p></figcaption></figure>
+      <figure class="proj"><img src="assets/proyecto5.jpeg" alt=""><figcaption><h4>Hewlett Packard</h4><p>Ampliación de laboratorio · Nuevo sistema eléctrico y refrigeración</p></figcaption></figure>
+      <figure class="proj"><img src="assets/proyecto6.jpeg" alt=""><figcaption><h4>Edificio Nicolás Mihanovich</h4><p>Diseño e instalación de monitoreo energético remoto</p></figcaption></figure>
+    </div>
+
+    <div class="ver-mas-container">
+      <button id="verMasBtn" class="ver-mas-btn">Ver más proyectos</button>
+    </div>
+
+    <div class="proyectos-extra">
+      <figure class="proj"><img src="assets/proyecto7.jpeg" alt=""><figcaption><h4>Osito Azul – Jugueterías</h4><p>Consultoría e instalación eléctrica, lumínica y HVAC</p></figcaption></figure>
+      <figure class="proj"><img src="assets/proyecto8.jpeg" alt=""><figcaption><h4>Piso Premium – Recoleta</h4><p>Proyecto y ejecución eléctrica y lumínica integral</p></figcaption></figure>
+      <figure class="proj"><img src="assets/proyecto9.jpeg" alt=""><figcaption><h4>Shopping San Juan</h4><p>Sistema de climatización tipo Roof Top</p></figcaption></figure>
+      <figure class="proj"><img src="assets/proyecto10.jpeg" alt=""><figcaption><h4>Barrio Castaños</h4><p>Iluminación vial LED de alta eficiencia</p></figcaption></figure>
+      <figure class="proj"><img src="assets/proyecto11.jpeg" alt=""><figcaption><h4>Estaciones Shell Shops</h4><p>Iluminación LED integral en locales de servicio</p></figcaption></figure>
+      <figure class="proj"><img src="assets/proyecto12.jpeg" alt=""><figcaption><h4>Syngenta</h4><p>Sistema de ventilación y climatización VRF</p></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- NOSOTROS -->
+<section id="nosotros" class="section nosotros-section">
+  <div class="nosotros-container reveal">
+    
+    <!-- Columna izquierda: texto -->
+    <div class="nosotros-text">
+      <h2>Nosotros</h2>
+      <p>
+        <strong>Energy Sapiens Argentina S.A.</strong> es una empresa constituida en 2018, formada por profesionales de ingeniería y arquitectura.
+      </p>
+
+      <p>
+        Nos caracterizamos por ser una empresa flexible y competitiva, dando respuesta a las necesidades de cada cliente.
+      </p>
+
+      <p>
+        La energía es fundamental para la vida humana y el desarrollo de los países, pero también es un recurso escaso en todo el mundo y con costo creciente.
+      </p>
+
+      <p>
+        En <strong>Energy Sapiens Argentina S.A.</strong> estamos permanentemente actualizados sobre las nuevas tendencias y tecnologías en materia de ahorro de energía. Trabajamos con pasión y vocación para que nuestros clientes reduzcan el consumo y mejoren sus resultados.
+      </p>
+
+      <p>
+        Somos un equipo multidisciplinario con el claro objetivo de cumplir los proyectos en tiempo y forma, buscando la excelencia en nuestro trabajo y atención al cliente. Respetamos a nuestros empleados y proveedores, cuidamos la comunidad y el medio ambiente donde realizamos nuestros proyectos.
+      </p>
+    </div>
+
+    <!-- Columna derecha: imagen -->
+    <div class="nosotros-media">
+      <div class="image-overlay"></div>
+      <img src="assets/nosotros.jpg" alt="Equipo de trabajo Energy Sapiens" />
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CONTACTO -->
+<section id="contacto" class="contacto-section">
+  <div class="contacto-container reveal">
+
+    <!-- Título -->
+    <div class="contacto-head">
+      <h2>Contacto</h2>
+      <div class="title-bar"></div>
+      <p>Tu consulta es importante para nosotros. Nuestro equipo está preparado para asesorarte de la mejor manera posible.</p>
+    </div>
+
+    <div class="contacto-grid">
+      <!-- COLUMNA IZQUIERDA -->
+      <div class="contacto-info">
+        <h3>Oficina Principal</h3>
+        <p>Av. Juan B. Justo 6700<br>C1407FAR, CABA</p>
+
+        <h3>Empleos</h3>
+        <p>Para aplicar a un trabajo en Energy Sapiens Argentina S.A., enviá tu CV a:</p>
+        <a href="mailto:info@energysapiens.com.ar">info@energysapiens.com.ar</a>
+
+        <h3>Reciba un presupuesto</h3>
+        <a href="mailto:info@energysapiens.com.ar" class="highlight">info@energysapiens.com.ar</a>
+
+        <!-- MAPA -->
+        <div class="contacto-mapa">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13126.67876860738!2d-58.4832630439933!3d-34.61003838509537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb7f8cfd2f60b%3A0x7ef74c9e35ef4b3a!2sAv.%20Juan%20B.%20Justo%206700%2C%20C1407FAR%20CABA!5e0!3m2!1ses!2sar!4v1730000000000"
+            allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- COLUMNA DERECHA -->
+      <form class="contacto-form" action="enviar.php" method="POST">
+        <label>Nombre y Apellido *</label>
+        <input type="text" name="nombre" required placeholder="Tu nombre completo">
+
+        <label>Email *</label>
+        <input type="email" name="email" required placeholder="tu@email.com">
+
+        <label>Asunto</label>
+        <input type="text" name="asunto" placeholder="Motivo de tu mensaje">
+
+        <label>Mensaje</label>
+        <textarea name="mensaje" rows="4" placeholder="Escribí tu mensaje aquí..."></textarea>
+
+        <!-- reCAPTCHA -->
+        <div class="g-recaptcha" data-sitekey="TU_SITE_KEY_AQUI"></div>
+
+        <button type="submit" class="btn-grad">Enviar mensaje</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <img src="assets/logologo.png" alt="Energy Sapiens" class="footer-logo" />
+      <h3>Energy <span>Sapiens</span></h3>
+      <p>Ingeniería & Energía Inteligente</p>
+    </div>
+
+    <nav class="footer-nav">
+      <a href="#servicios">Servicios</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#nosotros">Estudio</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/company/energysapiens/"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.instagram.com/energysapiens/?hl=es-la"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/energy.sapiens.7"><i class="fab fa-facebook-f"></i></a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Energy Sapiens. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+  <i data-lucide="sun" class="icon-sun"></i>
+  <i data-lucide="moon" class="icon-moon"></i>
+</button>
+
+
+ <!-- GSAP -->
+<script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="main.js"></script>
+
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script>
+  // === THEME TOGGLE ===
+  const themeToggle = document.getElementById('themeToggle');
+  const heroImg = document.getElementById('heroImage');
+
+  const heroDark = "assets/hero.jpg";   // Imagen modo oscuro
+  const heroLight = "assets/herodia.png"; // Imagen modo claro
+
+  const updateHeroImage = () => {
+    heroImg.style.opacity = "0";
+    setTimeout(() => {
+      heroImg.src = document.body.classList.contains('light-mode') ? heroLight : heroDark;
+      heroImg.style.opacity = "1";
+    }, 300);
+  };
+
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    updateHeroImage();
+    toggleIcons();
+  });
+
+  // === ACTUALIZA ICONO DE SOL/LUNA ===
+  const toggleIcons = () => {
+    const sunIcon = themeToggle.querySelector('.icon-sun');
+    const moonIcon = themeToggle.querySelector('.icon-moon');
+    if (document.body.classList.contains('light-mode')) {
+      sunIcon.style.display = 'none';
+      moonIcon.style.display = 'block';
+    } else {
+      sunIcon.style.display = 'block';
+      moonIcon.style.display = 'none';
+    }
+  };
+
+  // Inicializa iconos al cargar
+  lucide.createIcons();
+  toggleIcons();
+</script>
+
+<script>
+  // === FOOTER YEAR AUTO ===
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script>
+  // === MENU HAMBURGUESA ===
+  const menuToggle = document.getElementById("menuToggle");
+  const navbar = document.querySelector(".navbar");
+
+  menuToggle.addEventListener("click", () => {
+    menuToggle.classList.toggle("active");
+    navbar.classList.toggle("active");
+  });
+</script>
+
+
+  
+</body>
+</html>
